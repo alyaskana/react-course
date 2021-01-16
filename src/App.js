@@ -1,34 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Profile from './components/Profile';
 
 const App = () => {
   return (
-    <div>
+    <div className='app-wrapper'>
       <Header />
-      <Technologies />
-    </div>
-  )
-}
-
-const Header = () => {
-  return (
-    <div>
-      <a>Home</a>
-      <a>Feed</a>
-      <a>Messages</a>
-    </div>
-  )
-}
-
-const Technologies = () => {
-  return (
-    <div>
-      <ul>
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
-      </ul>
+      <Navbar />
+      <Profile />
     </div>
   )
 }
