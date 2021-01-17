@@ -13,25 +13,7 @@
   padding: 0 50px;
 }
 
-.header {
-  grid-area: h;
-  background-color: khaki;
-}
-
-.header img {
-  width: 50px;
-}
-
-.nav {
-  grid-area: n;
-  background-color: cadetblue;
-}
-
-.content {
+.app-wrapper-content {
   grid-area: c;
   background-color: lightblue;
-}
-
-.content img {
-  width: 100%;
 }
