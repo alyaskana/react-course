@@ -16,12 +16,10 @@ const App = (props) => {
         <NavbarContainer />
         <div className='app-wrapper-content'>
           <Route path='/dialogs'>
-            <DialogsContainer
-              store={props.store} />
+            <DialogsContainer />
           </Route>
           <Route path='/profile'>
-            <Profile
-              store={props.store} />
+            <Profile />
           </Route>
           <Route path='/news' component={News} />
           <Route path='/music' component={Music} />
