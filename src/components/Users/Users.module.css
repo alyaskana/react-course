@@ -1,0 +1,58 @@
+.page_wrapper {
+  padding: 15px;
+}
+
+.user_wrapper {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.user_actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  background-color: darkslateblue;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.user_bio {
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px;
+  margin-left: 15px;
+  height: fit-content;
+  /* background-color: rgb(215, 233, 238); */
+}
+
+.bio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.location {
+  font-weight: bold;
+  text-align: right;
+}
