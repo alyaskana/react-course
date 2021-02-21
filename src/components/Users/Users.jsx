@@ -5,7 +5,9 @@ import { render } from "@testing-library/react";
 import React from 'react';
 
 class Users extends React.Component {
-  getUsers = () => {
+  constructor(props) {
+    super(props)
+    alert('new')
     if (this.props.users.length === 0) {
       axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
         this.props.setUsers(response.data.items)
