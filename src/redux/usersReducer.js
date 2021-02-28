@@ -1,13 +1,15 @@
-const SWITCH_FOLLOW = 'SWITCH_FOLLOW'
+const TOGGLE_FOLLOW = 'TOGGLE_FOLLOW'
 const SET_USERS = 'SET_USERS'
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
 const SET_TOTAL_COUNT = 'SET_TOTAL_COUNT'
+const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 
 let initialState = {
   users: [],
   pageSize: 20,
   totalCount: 20,
-  currentPage: 1
+  currentPage: 1,
+  isFetching: true
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -27,7 +29,7 @@ const usersReducer = (state = initialState, action) => {
         ...state,
         totalCount: action.totalCount
       }
-    case SWITCH_FOLLOW:
+    case TOGGLE_FOLLOW:
       return {
         ...state,
         users: state.users.map(u => {
@@ -37,14 +39,20 @@ const usersReducer = (state = initialState, action) => {
           return u
         })
       }
+    case TOGGLE_IS_FETCHING:
+      return {
+        ...state,
+        isFetching: action.isFetching
+      }
     default:
       return state
   }
 }
 
-export const toggleFollowAC = (userId) => ({ type: SWITCH_FOLLOW, userId })
+export const toggleFollowAC = (userId) => ({ type: TOGGLE_FOLLOW, userId })
 export const setUsersAC = (users) => ({ type: SET_USERS, users })
 export const setCurrentPage = (currentPage) => ({ type: SET_CURRENT_PAGE, currentPage })
 export const setTotalCount = (totalCount) => ({ type: SET_TOTAL_COUNT, totalCount })
+export const toggleIsFetching = (isFetching) => ({ type: TOGGLE_IS_FETCHING, isFetching })
 
 export default usersReducer;
