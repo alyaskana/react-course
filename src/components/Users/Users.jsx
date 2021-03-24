@@ -1,6 +1,7 @@
 import s from "./Users.module.css";
 import default_avatar_small from '../../assets/images/default_avatar_small.png'
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 
 let Users = (props) => {
@@ -23,7 +24,9 @@ let Users = (props) => {
           <div key={u.id} className={s.user_wrapper}>
             <div className={s.user_actions}>
               <div className={s.avatar_wrapper}>
-                <img src={u.photos.small != null ? u.photos.small : default_avatar_small} className={s.avatar} />
+                <NavLink to={'/profile/' + u.id}>
+                  <img src={u.photos.small != null ? u.photos.small : default_avatar_small} className={s.avatar} />
+                </NavLink>
               </div>
               <div className={s.btn_wrapper}>
                 <button className={s.btn} onClick={() => { props.toggleFollow(u.id) }}>{u.isFollowed ? 'Unfollow' : 'Follow'}</button>
