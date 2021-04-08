@@ -19,7 +19,7 @@ const App = (props) => {
           <Route path='/dialogs'>
             <DialogsContainer />
           </Route>
-          <Route path='/profile' component={ProfileContainer} />
+          <Route path='/profile/:id?' component={ProfileContainer} />
           <Route path='/users' component={UsersContainer} />
           <Route path='/news' component={News} />
           <Route path='/music' component={Music} />
